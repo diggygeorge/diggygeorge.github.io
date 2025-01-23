@@ -19,6 +19,7 @@ function input(event) {
 }
 
 document.getElementById("about").classList.toggle("fadein");
+document.getElementById("projects").classList.toggle("fadein");
 
 const buttons = document.querySelectorAll("#button");
 buttons.forEach(button => {
