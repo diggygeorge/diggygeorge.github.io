@@ -1,19 +1,17 @@
+document.getElementById("projects").style.display = "none";
+
 function input(event) {
     const clickedButton = event.target;
     button = clickedButton.innerText;
 
-    if (button === "Resume")
-    {
-        console.log("resume downloaded!");
-    }
-    else if (button === "Daniel George")
+    if (button === "Daniel George")
     {
         document.getElementById("projects").style.display = "none";
         document.getElementById("about").style.display = "block";
     }
     else if (button === "Projects")
     {
-        document.getElementById("projects").style.display = "block";
+        document.getElementById("projects").style.display = "flex";
         document.getElementById("about").style.display = "none";
     }
 }

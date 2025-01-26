@@ -44,7 +44,7 @@ li {
     padding-right: 25px;
 }
 
-h1 > a {
+a {
     text-decoration: none;
     color: black;
 }
@@ -107,13 +107,35 @@ p {
 }
 
 #projects {
-    margin-left: 20px;
-    margin-right: 20px;
-    display: none;
+    display: flex; /* Flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    justify-content: center; /* Center items horizontally */
+    gap: 24px; /* Space between projects */
+    padding: 40px 20px; /* Padding around the section */
 }
+
 .project {
-    display: inline-block;
-    text-align: center;
+    display: flex; /* Flexbox for centering project content */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center-align text inside projects */
+    gap: 16px; /* Space between elements inside the project */
+    max-width: 600px; /* Set max width for each project */
+    width: 100%; /* Make it responsive */
+    padding: 20px; /* Add inner padding */
+    border: 3px solid black; /* Border for styling */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    background-color: #f9f9f9; /* Light background for better contrast */
+}
+
+iframe {
+    width: 100%; /* Make iframe responsive */
+    max-width: 532px; /* Limit max width */
+    height: 300px; /* Fixed height */
+    border: none; /* Remove iframe border */
+    display: block; /* Prevent inline display issues */
+    margin: 0 auto; /* Center iframe within the project */
 }
 
 .social-img {
@@ -136,18 +158,16 @@ h3 {
     animation-duration: 0.6s;
 }
 
-@media (max-width: 750px)
-{
-    h1 {
-        font-size: 1rem;
-    }
-    
-    p {
-        font-size: 1.5rem;
-        padding: 150px 20px 0px 20px;
+@media (max-width: 750px) {
+    #projects {
+        gap: 16px; /* Adjust spacing for smaller screens */
     }
 
-    h2 {
-        padding: 150px 10px 100px 10px;
+    .project {
+        max-width: 100%; /* Allow projects to fill smaller screens */
+    }
+
+    iframe {
+        height: 200px; /* Adjust height for smaller screens */
     }
 }
