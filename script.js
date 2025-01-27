@@ -1,5 +1,3 @@
-document.getElementById("projects").style.display = "none";
-
 function input(event) {
     const clickedButton = event.target;
     button = clickedButton.innerText;

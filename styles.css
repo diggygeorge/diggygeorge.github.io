@@ -120,7 +120,7 @@ p {
 }
 
 #projects {
-    display: flex; /* Flexbox for layout */
+    display: none; /* Flexbox for layout */
     flex-wrap: wrap; /* Allow wrapping for responsiveness */
     justify-content: center; /* Center items horizontally */
     gap: 24px; /* Space between projects */
@@ -193,11 +193,12 @@ h3 {
     h1 {
         text-align: center;
     }
-    nav {
+
+    nav, nav ul {
         display: none;
     }
 
     #projects {
-        display: block;
+        display: flex;
     }
 }
