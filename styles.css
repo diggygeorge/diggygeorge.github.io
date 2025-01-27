@@ -18,6 +18,10 @@
     }
 }
 
+:root {
+    --textcolor: rgb(75, 169, 214);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -25,55 +29,64 @@
     scroll-behavior: smooth;
 }
 
+html {
+    overflow-y: scroll;
+}
+
 header {
-    padding: 1.5rem 6rem 1.5rem 6rem;
+    padding: 1rem 0rem 1rem 3rem;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Centers the items horizontally */
+    align-items: center; /* Centers the items vertically */
     position: fixed;
     top: 0;
-    font-family: "Comfortaa", sans-serif;
-    color: black;
-    background-color: white;
-    border-bottom: 5px solid gray;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #070511;
+    border-bottom: 5px solid var(--textcolor);
+}
+
+header > h1, header > nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    display: flex; /* Makes the list items line up horizontally */
+    padding-left: 0; /* Removes default list padding */
+    gap: 25px; /* Space between list items */
+    padding-right: 35px;
 }
 
 li {
     list-style-type: none;
-    display: inline-block;
-    padding-right: 25px;
+    font-size: 1.25rem;
 }
 
-a {
+li {
+    line-height: 1.75;
+}
+
+.link-button > a {
+    filter: invert(1);
+}
+
+.link-button > a:hover {
+    filter: invert(0.35) sepia(1) saturate(5) hue-rotate(170deg) brightness(1.1);
+}
+
+.button, .button > a {
+    color: #ffffff;
     text-decoration: none;
-    color: black;
-}
-
-h3 > a {
-    text-decoration: none;
-    color: black;
-}
-
-h1 > a:hover {
-    color: gray;
-}
-
-h3 > a:hover {
-    color:gray;
-}
-
-#button {
-    color: black;
-    text-decoration: none;
-    border: 3px solid transparent;
     display: inline-block;
     justify-content: center;
     align-items: center;
 }
 
-#button:hover {
-    font-weight: bold;
+.button:hover, .button > a:hover {
     cursor: pointer;
+    color: var(--textcolor);
 }
 
 main > div {
@@ -92,7 +105,7 @@ h2 {
     padding-bottom: 50px;
     text-align: center;
     font-size: 3rem;
-    font-family: 'Trebuchet MS'
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 h4 {
@@ -103,7 +116,7 @@ p {
     font-size: 3rem;
     padding: 10px 100px 40px 100px;
     text-align: center;
-    font-family: 'Open Sans', 'Helvetica Neue', sans-serif
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #projects {
@@ -141,7 +154,7 @@ iframe {
 .social-img {
     max-width: 30px;
     margin: 0 auto;
-    display: grid;
+    display: inline-block;
 }
 
 h3 {
@@ -169,5 +182,22 @@ h3 {
 
     iframe {
         height: 200px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    p {
+        font-size: 1.25rem;
+    }
+
+    h1 {
+        text-align: center;
+    }
+    nav {
+        display: none;
+    }
+
+    #projects {
+        display: block;
     }
 }
