@@ -84,6 +84,15 @@ li {
     align-items: center;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: gray;
+}
+
 .button:hover, .button > a:hover {
     cursor: pointer;
     color: var(--textcolor);
@@ -188,14 +197,22 @@ h3 {
 @media (max-width: 600px) {
     p {
         font-size: 1.25rem;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 200px;
     }
 
-    h1 {
-        text-align: center;
+    header {
+        justify-content: center;
+        padding-left: 0rem;
     }
 
     nav, nav ul {
         display: none;
+    }
+
+    #about {
+        display: block;
     }
 
     #projects {
