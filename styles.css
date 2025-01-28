@@ -117,13 +117,10 @@ h2 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-h4 {
-    padding-top: 100px;
-}
 
-p {
+section > p:first-of-type {
     font-size: 3rem;
-    padding: 10px 100px 40px 100px;
+    padding: 110px 100px 40px 100px;
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
