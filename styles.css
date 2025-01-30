@@ -18,8 +18,18 @@
     }
 }
 
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
 :root {
-    --textcolor: rgb(75, 169, 214);
+    --buttoncolor: rgb(75, 169, 214);
+    --bgcolor: #070511;
+    --textcolor: #f9f9f9;
+
 }
 
 * {
@@ -31,6 +41,8 @@
 
 html {
     overflow-y: scroll;
+    background-image: url("img/morning.jpg");
+    background-attachment: fixed;
 }
 
 header {
@@ -42,8 +54,8 @@ header {
     position: fixed;
     top: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #070511;
-    border-bottom: 5px solid var(--textcolor);
+    background-color: var(--bgcolor);
+    border-bottom: 5px solid var(--buttoncolor);
 }
 
 header > h1, header > nav {
@@ -95,18 +107,17 @@ a:hover {
 
 .button:hover, .button > a:hover {
     cursor: pointer;
-    color: var(--textcolor);
-}
-
-main > div {
-    color: #000000;
-    font-family: serif;
-    background-color: #ffffff;
+    color: var(--buttoncolor);
 }
 
 main > div > a:first-child {
     width: 100rem;
     height: 100rem;
+}
+
+p {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
 
 h2 {
@@ -115,6 +126,8 @@ h2 {
     text-align: center;
     font-size: 3rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
 
 
@@ -145,7 +158,7 @@ section > p:first-of-type {
     border: 3px solid black; /* Border for styling */
     border-radius: 12px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
-    background-color: #f9f9f9; /* Light background for better contrast */
+    background-color: #f9f9f9;
 }
 
 iframe {
@@ -175,6 +188,44 @@ h3 {
 .fadeout {
     animation-name: fadeout;
     animation-duration: 0.6s;
+}
+
+.morning {
+    background-image: url("img/morning.jpg");
+    -webkit-transition: background-image 500ms linear;
+    -ms-transition: background-image 500ms linear;
+    transition: background-image 500ms linear;
+}
+
+.evening {
+    background-image: url("img/evening.jpg");
+    -webkit-transition: background-image 500ms linear;
+    -ms-transition: background-image 500ms linear;
+    transition: background-image 500ms linear;
+}
+
+.night {
+    background-image: url("img/night.jpg");
+    -webkit-transition: background-image 500ms linear;
+    -ms-transition: background-image 500ms linear;
+    transition: background-image 500ms linear;
+}
+
+#special {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#special:hover {
+    background-color: var(--bgcolor);
+    color: #f9f9f9;
+    cursor: pointer;
 }
 
 @media (max-width: 750px) {
