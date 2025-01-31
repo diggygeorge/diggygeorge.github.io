@@ -2,8 +2,7 @@ function input(event) {
     const clickedButton = event.target;
     button = clickedButton.innerText;
 
-    // Check which button is clicked and display the correct section
-    if (button === "Daniel George") {
+    if (button === "About Me") {
         document.getElementById("projects").style.display = "none";
         document.getElementById("about").style.display = "block";
         document.getElementById("about").classList.add("fadein");
@@ -14,7 +13,6 @@ function input(event) {
     }
 }
 
-// Fade logic for "about" and "projects"
 document.getElementById("about").classList.add("fadein");
 document.getElementById("projects").classList.add("fadein");
 
@@ -46,4 +44,31 @@ document.getElementById("special").addEventListener("click", function () {
         document.documentElement.classList.remove("evening");
         document.documentElement.classList.add("night");
     }
+})
+
+var invisible = 0;
+
+const letters = document.querySelectorAll(".letter");
+letters.forEach(letter => {
+    letter.addEventListener("click", function () {
+        if (letter.style.color != "transparent")
+        {
+            letter.style.color = "transparent";
+            invisible++;
+        }
+        if (invisible === 10)
+        {
+            document.getElementById("warning").innerHTML = "don't do it";
+        }
+        if (invisible === 11)
+        {
+            document.getElementById("warning").innerHTML = "last chance";
+        }
+        if (invisible === 12)
+        {
+            document.getElementById("warning").innerHTML = "";
+            document.documentElement.classList.remove(["morning", "evening", "night"]);
+            document.documentElement.classList.add("nice");
+        }
+    })
 })
