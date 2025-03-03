@@ -1,3 +1,8 @@
+if (window.confirm("Hello!  I've migrated to a new website!  If you click \"Ok\", you will be automatically redirected to there!")) 
+{
+window.location.href='https://diggygeorge.vercel.app/';
+};
+
 function input(event) {
     const clickedButton = event.target;
     button = clickedButton.innerText;
